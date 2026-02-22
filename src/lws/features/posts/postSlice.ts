@@ -2,10 +2,10 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { getPost } from "./postsApi";
 
 interface Post {
-  userId: number,
-  id: number,
-  title: string,
-  body: string
+  userId: number;
+  id: number;
+  title: string;
+  body: string;
 }
 
 export type PostState = {
@@ -22,10 +22,13 @@ const initialState: PostState = {
   error: null,
 };
 
-export const fetchPosts = createAsyncThunk<Post[]>("/posts/fetchPosts", async () => {
-  const posts = await getPost();
-  return posts;
-});
+export const fetchPosts = createAsyncThunk<Post[]>(
+  "/posts/fetchPosts",
+  async () => {
+    const posts = await getPost();
+    return posts;
+  },
+);
 
 export const postSlice = createSlice({
   name: "posts",

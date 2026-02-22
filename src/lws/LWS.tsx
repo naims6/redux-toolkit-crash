@@ -1,7 +1,8 @@
 import CounterRedux from "./features/counter/Counter";
 import Stats from "./features/counter/Stats";
-import { useAppDispatch, useAppSelector } from "./app/hooks/hooks";
+
 import Posts from "./components/Posts";
+import { useAppDispatch, useAppSelector } from "../app/hooks/hooks";
 
 function LWS() {
   const counters = useAppSelector((state) => state.counters);

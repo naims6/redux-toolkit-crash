@@ -1,6 +1,7 @@
 import { useEffect } from "react";
-import { useAppDispatch, useAppSelector } from "../app/hooks/hooks";
+
 import { fetchPosts } from "../features/posts/postSlice";
+import { useAppDispatch, useAppSelector } from "../../app/hooks/hooks";
 
 const Posts = () => {
   const { posts, isError, isLoading, error } = useAppSelector(
