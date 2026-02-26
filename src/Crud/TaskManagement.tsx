@@ -118,6 +118,7 @@ const TaskManagement = () => {
               <th>Description</th>
               <th>Status</th>
               <th>Priority</th>
+              <th>Actions</th>
             </tr>
           </thead>
           <tbody>
